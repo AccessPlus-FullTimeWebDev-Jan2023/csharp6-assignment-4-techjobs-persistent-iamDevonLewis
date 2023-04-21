@@ -15,6 +15,9 @@
     --If a skill does not have a job listed, it should not be included in the results of this query.
 
 --Answer: SELECT skill.skillName, job.name
---        FROM skill
---        INNER JOIN jobs j ON skill.id = j.jobid
---        ORDER BY skill.skillName ASC;
+--        SELECT *
+--        FROM skills
+--        Left JOIN jobskills
+--        ON skills.Id = jobskills.SkillsId
+--        where jobskills.JobsId IS NOT NULL
+--        ORDER BY skillName ASC;
